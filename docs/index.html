@@ -250,7 +250,7 @@
     <script>
         const $ = (id) => document.getElementById(id);
 
-        const API = location.hostname === 'localhost' ? '' : 'https://invernadero-backend.onrender.com';
+        const API = location.hostname === 'localhost' ? '' : 'https://invernadero-backend-n82j.onrender.com';
         const WS_URL = API ? API.replace(/^http/, 'ws') + '/ws' : `${location.protocol === 'https:' ? 'wss' : 'ws'}://${location.host}/ws`;
 
         const chart = new Chart($('grafica'), {
