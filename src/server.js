@@ -11,7 +11,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use('/api/lecturas', require('./routes/lecturas'));
-// app.use(express.static(path.join(__dirname, '..', 'public')));
+app.use(express.static(path.join(__dirname, '..', 'docs')));
 
 // Servidor HTTP + WebSocket en el mismo puerto
 const server = http.createServer(app);
