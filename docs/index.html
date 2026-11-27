@@ -301,7 +301,7 @@
 
         async function cargarHistorial() {
             try {
-                const r = await fetch('/api/lecturas?limit=30');
+                const r = await fetch(API + '/api/lecturas?limit=30');
                 if (!r.ok) throw new Error('HTTP ' + r.status);
                 const d = await r.json();
                 if (!d.length) { $('vacio').hidden = false; return; }
